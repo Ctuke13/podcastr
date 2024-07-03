@@ -21,7 +21,6 @@ const RightSideBar = () => {
     return <LoaderSpinner />;
   }
 
-  console.log(topPodcasters);
   return (
     <section className="right_sidebar text-white-1 ">
       <SignedIn>
