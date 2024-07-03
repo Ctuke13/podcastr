@@ -22,10 +22,10 @@ export const getUserById = query({
 export const getTopUserByPodcastCount = query({
   args: {},
   handler: async (ctx, args) => {
-    const user = await ctx.db.query("users").collect();
+    const users = await ctx.db.query("users").collect();
 
     const userData = await Promise.all(
-      user.map(async (u) => {
+      users.map(async (u) => {
         const podcasts = await ctx.db
           .query("podcasts")
           .filter((q) => q.eq(q.field("authorId"), u.clerkId))

@@ -53,7 +53,7 @@ export const podcastData = [
   },
   {
     id: 2,
-    title: "The Futur",
+    title: "The Future",
     description: "This is how the news should sound",
     imgURL:
       "https://lovely-flamingo-139.convex.cloud/api/storage/16fbf9bd-d800-42bc-ac95-d5a586447bf6",
@@ -101,3 +101,5 @@ export const podcastData = [
       "https://lovely-flamingo-139.convex.cloud/api/storage/221ee4bd-435f-42c3-8e98-4a001e0d806e",
   },
 ];
+
+export const DEFAULT_IMAGE_PATH = "/lib/no_image.png";
