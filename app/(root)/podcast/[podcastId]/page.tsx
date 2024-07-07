@@ -10,12 +10,15 @@ import { useQuery } from "convex/react";
 import Image from "next/image";
 import React from "react";
 import { DEFAULT_IMAGE_PATH } from "@/constants";
+import { useParams } from "next/navigation";
 
 const PodcastDetails = ({
   params: { podcastId },
 }: {
   params: { podcastId: Id<"podcasts"> };
 }) => {
+  const p = useParams();
+  console.log("Params:", p);
   const { user } = useUser();
   const podcast = useQuery(api.podcasts.getPodcastById, {
     podcastId,
